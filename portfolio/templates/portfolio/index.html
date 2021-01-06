@@ -1,0 +1,41 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+  <section class="jumbotron text-center">
+    <div class="container">
+
+      {% load static %}
+      <figure class="figure">
+        <img src="{% static 'portfolio/pro_shot.jpg' %}" class="img-thumbnail" style="width:250px;">
+      </figure>
+
+      <h1>Zibo Zhang</h1>
+      <p class="lead text-muted">Hello! I'm a graduate computer enigneering student at New York Unversity.</p>
+      <p>
+        <a href="blog/" class="btn btn-primary my-2">Blogs</a>
+        <a href="{% static 'portfolio/Resume.pdf' %}" class="btn btn-primary my-2">Resume</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      {% for project in projects %}
+      <div class="card" style="width: 20rem;">
+        <img src="{{ project.image.url }}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          {% if project.url %}
+            <a href="{{ project.url }}" class="card-link">Link</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+{% endblock %}

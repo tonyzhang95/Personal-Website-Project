@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('generator/', include('password_generator.urls')),
     path('blog/', include('blog.urls')),
+    path('todo/', include('todo.urls')),
 ]
 
 

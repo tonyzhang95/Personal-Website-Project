@@ -1,4 +1,4 @@
-# Personal-Website-Project
+# Personal Website Project
 
 ### A personal website with blogs and portfolio sections built with Django
 
@@ -11,4 +11,4 @@ Content:
 
 More to add:
 - [ ] Add blog posts
-- [ ] 
+- [ ] Deploy this website onto the Internet, possibly with AWS or other cloud service provider.
